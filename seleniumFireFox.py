@@ -15,8 +15,8 @@ try:
     options.add_argument('--headless')
     options.add_argument('--no-sandbox')
     # notsfasd
-    executable_path=ChromeDriverManager(chrome_type=ChromeType.CHROMIUM).install()
-    brower = webdriver.Chrome(path=getCurrentDirPath(),options=options,executable_path=executable_path)
+    executable_path=ChromeDriverManager(chrome_type=ChromeType.CHROMIUM,path=getCurrentDirPath()).install()
+    brower = webdriver.Chrome(options=options,executable_path=executable_path)
     brower.get('https://pythonbasics.org')
     print(brower.page_source)
 finally:
