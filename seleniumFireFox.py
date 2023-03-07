@@ -16,7 +16,7 @@ try:
     options.add_argument('--no-sandbox')
     # notsfasd
     # executable_path=ChromeDriverManager(chrome_type=ChromeType.CHROMIUM,path=getCurrentDirPath()).install()
-    brower = webdriver.Chrome(options=options,executable_path="/chromedriver")
+    brower = webdriver.Chrome(options=options,executable_path=getCurrentDirPath())
     brower.get('https://pythonbasics.org')
     print(brower.page_source)
 finally:
