@@ -12,7 +12,7 @@ try:
     options.add_argument('--headless')
     options.add_argument('--no-sandbox')
     
-    executable_path=ChromeDriverManager(version="89.0.4389.114",chrome_type=ChromeType.CHROMIUM).install()
+    executable_path=ChromeDriverManager(chrome_type=ChromeType.CHROMIUM).install()
     brower = webdriver.Chrome(options=options)
     brower.get('https://pythonbasics.org')
     print(brower.page_source)
